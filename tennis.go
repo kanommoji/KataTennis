@@ -8,13 +8,17 @@ func SummaryTennisGame(scorePlayerOne int, scorePlayerTwo int) string {
 	if winner != "" {
 		return winner
 	}
-	scores := [4]string{"LOVE", "15", "30", "40"}
-	return scores[scorePlayerOne] + " - " + scores[scorePlayerTwo]
+	return showScore(scorePlayerOne, scorePlayerTwo)
 }
 
 func newCourt() {
 	scoreOne = []int{0}
 	scoreTwo = []int{0}
+}
+
+func showScore(scorePlayerOne int, scorePlayerTwo int) string {
+	scores := [4]string{"LOVE", "15", "30", "40"}
+	return scores[scorePlayerOne] + " - " + scores[scorePlayerTwo]
 }
 
 func checkWinner(scorePlayerOne int, scorePlayerTwo int) string {

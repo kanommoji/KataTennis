@@ -100,3 +100,15 @@ func Test_SummaryTennisGame_Input_Score_Player_One_3_Player_Two_0_Should_Be_40_L
 		t.Errorf("Expect %s but got %s", expected, actual)
 	}
 }
+
+func Test_SummaryTennisGame_Input_Score_Player_One_4_Player_Two_0_Should_Be_Player_1_Win(t *testing.T) {
+	expected := "Player 1 Win"
+	scorePlayerOne := 4
+	scorePlayerTwo := 0
+
+	actual := tennis.SummaryTennisGame(scorePlayerOne, scorePlayerTwo)
+
+	if expected != actual {
+		t.Errorf("Expect %s but got %s", expected, actual)
+	}
+}
